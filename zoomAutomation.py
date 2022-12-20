@@ -1,7 +1,7 @@
 import time
 import pandas as pd
 import src.timeZoomFunctions as tzf
-import src.recordProccess as recordProccess
+import src.recordProcess as recordProcess
 
 
 zoomPath = tzf.configPath('zoom', 'path')
@@ -26,11 +26,11 @@ while True:
             
             recordingTime = tzf.recordingTime(row)
             lessonLabel = row['label']
-            lessonLabel = recordProccess.exportName(lessonLabel)
-            recordProccess.audioScreenRecordingMultiproccessing(recordingTime)
-            recordProccess.mergeVideoAudio()
-            recordProccess.renamingCleaning(lessonLabel)
-            recordProccess.tempDeletion()
+            lessonLabel = recordProcess.exportName(lessonLabel)
+            recordProcess.audioScreenRecordingMultiproccessing(recordingTime)
+            recordProcess.mergeVideoAudio()
+            recordProcess.renamingCleaning(lessonLabel)
+            recordProcess.tempDeletion()
            
         else:
             wait = tzf.waitTime(row['start'])
