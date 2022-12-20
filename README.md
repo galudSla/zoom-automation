@@ -44,7 +44,7 @@ A few of the things you can do with Zoom automation:
 * `pip install -r requirements.txt`
 
 
-## Script structure
+## Script Structure
 
 * Firstly open config.yml and edit the zoom absolute path and the name of your .csv schedule file (default schedule.csv). The script takes advantage of the information in the schedule.csv in order to plan the automation. Be careful to keep the format of the dates, time and the name of the day as it is presented in the cloned schedule.csv when entering the schedule information, otherwise you will bump into errors. 
 * The script checks if today matches the day in the schedule and saves in a new dataframe the row that meet the condition. If there is no scheduled meeting for today the script is set to sleep until the day changes (23:59), then it checks the day again and get a new dataframe. 
