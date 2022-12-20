@@ -1,0 +1,6 @@
+zoom:
+    path: 'C:\\Program Files\\Zoom\\bin\\Zoom.exe'
+
+csv:
+    name: 'schedule.csv'
+
